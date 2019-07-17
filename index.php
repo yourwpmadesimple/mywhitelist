@@ -134,10 +134,11 @@ function mywl_options_page(  ) {
 			<?php
 			settings_fields( 'pluginPage' );
 			do_settings_sections( 'pluginPage' );
-			submit_button();
+            submit_button('Save Settings');
+            ;
 			?>
 
 		</form>
 		<?php
-
+include "includes/mywhitelist.php";
 }
