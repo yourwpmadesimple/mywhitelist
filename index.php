@@ -7,6 +7,22 @@
 * Author: Wayne Hatter
 * Author URI: https://yourwpmadesimple.com
 **/
+function mywl_activation_redirect( $plugin ) {
+    if( $plugin == plugin_basename( __FILE__ ) ) {
+        exit( wp_redirect( admin_url( 'admin.php?page=my_whitelist' ) ) );
+    }
+}
+add_action( 'activated_plugin', 'mywl_activation_redirect' );
+
+add_filter('plugin_action_links_'.plugin_basename(__FILE__), 'mywl_settings_link');
+function mywl_settings_link( $links ) {
+	$links[] = '<a href="' .
+		admin_url( 'admin.php?page=my_whitelist' ) .
+		'">' . __('Settings') . '</a>';
+	return $links;
+}
+
+
 function mywhitelist() {
     wp_register_style('mywhitelist', plugins_url('/includes/css/style.css',__FILE__ ));
     wp_enqueue_style('mywhitelist');
