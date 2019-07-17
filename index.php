@@ -7,6 +7,14 @@
 * Author: Wayne Hatter
 * Author URI: https://yourwpmadesimple.com
 **/
+function mywhitelist() {
+    wp_register_style('mywhitelist', plugins_url('/includes/css/style.css',__FILE__ ));
+    wp_enqueue_style('mywhitelist');
+    /*wp_register_script( 'your_namespace', plugins_url('your_script.js',__FILE__ ));
+    wp_enqueue_script('your_namespace');*/
+}
+
+add_action( 'admin_init','mywhitelist');
 
 // Options Page
 
@@ -33,45 +41,63 @@ function mywl_settings_init(  ) {
 	);
 
 	add_settings_field( 
-		'mywl_email', 
-		__( 'WhiteList Email', 'mywhitelist' ), 
-		'mywl_email_render', 
-		'pluginPage', 
-		'mywl_pluginPage_section' 
-	);
-
-	add_settings_field( 
 		'mywl_name', 
-		__( 'WhiteList Name', 'mywhitelist' ), 
+		__( 'Your email "From:" text:', 'mywhitelist' ), 
 		'mywl_name_render', 
 		'pluginPage', 
 		'mywl_pluginPage_section' 
 	);
 
+	add_settings_field( 
+		'mywl_email', 
+		__( 'Your "From:" email address:', 'mywhitelist' ), 
+		'mywl_email_render', 
+		'pluginPage', 
+		'mywl_pluginPage_section' 
+    );
+    
+	add_settings_field( 
+		'mywl_brand', 
+		__( 'Your brand name:', 'mywhitelist' ), 
+		'mywl_brand_render', 
+		'pluginPage', 
+		'mywl_pluginPage_section' 
+	);
+
 
 }
-
-
-function mywl_email_render(  ) { 
-
-	$options = get_option( 'mywl_settings' );
-	?>
-	<input size="30" type='email' name='mywl_settings[mywl_email]' value='<?php echo $options['mywl_email']; ?>'><br>
-    <span style="color:green;"><?php echo $options['mywl_email']; ?></span>
-	<?php
-
-}
-
 
 function mywl_name_render(  ) { 
 
 	$options = get_option( 'mywl_settings' );
 	?>
-	<input size="30" type='text' name='mywl_settings[mywl_name]' value='<?php echo $options['mywl_name']; ?>'><br>
-    <span style="color:green;"><?php echo $options['mywl_name']; ?></span>
+	<input size="30" type='text' name='mywl_settings[mywl_name]' value='<?php echo $options['mywl_name']; ?>' require><span class="require">*required!</span><br>
+    <span class="field-value"><?php echo $options['mywl_name']; ?></span>
 	<?php
 
 }
+
+function mywl_email_render(  ) { 
+
+	$options = get_option( 'mywl_settings' );
+	?>
+	<input size="30" type='email' name='mywl_settings[mywl_email]' value='<?php echo $options['mywl_email']; ?>' require><span class="require">*required!</span><br>
+    <span class="field-value"><?php echo $options['mywl_email']; ?></span>
+	<?php
+
+}
+
+function mywl_brand_render(  ) { 
+
+	$options = get_option( 'mywl_settings' );
+	?>
+	<input size="30" type='text' name='mywl_settings[mywl_brand]' value='<?php echo $options['mywl_brand']; ?>' require><span class="require">*required!</span><br>
+    <span class="field-value"><?php echo $options['mywl_brand']; ?></span>
+	<?php
+
+}
+
+
 
 
 function mywl_settings_section_callback(  ) { 
