@@ -26,8 +26,8 @@ function mywl_settings_link( $links ) {
 function mywhitelist() {
     wp_register_style('mywhitelist', plugins_url('/includes/css/style.css',__FILE__ ));
     wp_enqueue_style('mywhitelist');
-    /*wp_register_script( 'your_namespace', plugins_url('your_script.js',__FILE__ ));
-    wp_enqueue_script('your_namespace');*/
+    wp_register_script( 'mywl-js', plugins_url('/includes/js/scripts.js',__FILE__ ));
+    wp_enqueue_script('mywl-js');
 }
 
 add_action( 'admin_init','mywhitelist');
@@ -127,7 +127,7 @@ function mywl_settings_section_callback(  ) {
 function mywl_options_page(  ) { 
 
 		?>
-		<form action='options.php' method='post'>
+		<form id="mywl-form" action='options.php' method='post'>
 
 			<h2>My WhiteList</h2>
 
@@ -139,6 +139,16 @@ function mywl_options_page(  ) {
 			?>
 
 		</form>
-		<?php
+        <?php
+echo '<button class="visual">View Visual Page</button>';
+echo '<button class="html">View HTML Code</button>';
+echo '<div id="mywl-html">';  
+show_source("includes/mywhitelist.php");
+echo "</div>";
+echo '<div id="mywl-visual">';
 include "includes/mywhitelist.php";
+echo "</div>";
+
+
+
 }

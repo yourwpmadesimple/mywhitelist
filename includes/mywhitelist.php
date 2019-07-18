@@ -10,202 +10,8 @@
 <meta property="og:description" content="Whitelist Your WordPress Made Simple to be sure you get the email you requested...">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://s3.amazonaws.com/wlist-images/email-whitelist-screenshot-full.png">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style type="text/css">
-    @import 'https://fonts.googleapis.com/css?family=Roboto';
-    div.main h1 {
-        font-family: 'Roboto', sans-serif;
-        }
-    div.main h2 {
-        font-size: 1.7em;
-        margin: 0;
-        padding: 0;
-        font-family: 'Roboto', sans-serif;
-        }
-    div.main h3 {
-        font-family: 'Roboto', sans-serif;
-        }
-    div.main h4 {
-        font-size: 18px;
-        font-weight: bold;
-        font-family: 'Roboto', sans-serif;
-        }
-    div.main p {
-        font-family: 'Roboto', sans-serif;
-        font-size: 18px;
-    }
-    div.main li {
-        font-size: 18px;
-        font-family: 'Roboto', sans-serif;
-        line-height: 30px;
-        }
-    div.main a {
-        text-decoration: none;
-        color: #FFFFFF;
-        }
-    div.main .mobileButton {
-        margin: 2%;
-        margin-bottom: 3%;
-        padding: 2%;
-        border: solid #adadba 1px;
-        border-radius: 0px;
-        text-align: center;
-        font-family: verdana;
-        font-weight: bold;
-        }
-        div.main .wrapper {
-        width: 800px;
-        text-align: left;
-    }
-    div.main .container{
-        margin: 0 auto;
-        }
-        div.main ul{
-        list-style:none;
-    }
-    div.main ul li{
-        padding:10px 10px;
-    }
-    div.main ul li a{
-        text-align:center;
-        font-size: 21px;
-        text-decoration:none;
-    }
-    div.main .columnHeading{
-        width:25%;
-        float:left;
-    }
-    
-    div.main .headingBorder{
-        padding:20px 0;
-        text-align:center;
-        border-top:2px solid gray;
-        border-bottom:2px solid gray;
-    }
-    div.main .endRow{
-        float:right;
-    }
-    div.main .clearRight{
-        clear:left;
-    }
-    div.main .submenuPopularAppBtn,div.main .submenuEmailClientBtn,div.main .submenuSecuritySoftBtn,div.main .submenuSpamFiltersBtn{
-        text-align:center;
-        width:75%;
-        padding:10px;
-        cursor:pointer;
-    }
-    div.main .submenuPopularAppBtn{
-        background-color:#007abd;
-    }
-    
-    div.main .submenuEmailClientBtn{
-        background-color:#7ec324;
-    }
-    
-    div.main .submenuSecuritySoftBtn{
-        background-color:#fdab00;
-    }
-    
-    div.main .submenuSpamFiltersBtn{
-        background-color:#eb605a;
-    }
-    
-    @media only screen and (min-width:600px) and (max-width: 879px){
-        div.main .columnHeading{
-        width:50%;
-    }
-    
-    div.main .headingBorder{
-        padding:20px 0;
-        text-align:center;
-        border-top:2px solid gray;
-        border-bottom:2px solid gray;
-    }
-    
-    div.main #sSoftware{
-        clear:left;
-    }
-    }
-    
-    @media only screen 
-    and (min-width : 880px) and (max-width:1140px) {
-        div.main .columnHeading{
-        width:33.33333%;
-    }
-    
-    div.main #sFilters{
-        clear:both;
-    }
-    }
-    /*fix margin*/
-    @media only screen
-    and (min-width:0) and (max-width:600px){
-        div.main body{
-      margin:10px;
-    }
-    div.main .columnHeading{
-        width:100%;
-    }
-    div.main .clearFix {
-        clear: both;
-    }
-    }
-    
-    /*Instruction Icons*/
-    div.main .instruction-icon {
-            float: left;
-            margin: 10px;
-            }
-    
-    /* BEGIN Back to top button */
-    div.main a.backTop {
-      padding: 10px;
-    }
-    div.main .backTop {
-        color: #FFFFFF;
-        font-weight: bold;
-        font-family: roboto;
-        display: inline-block; 
-        position: fixed;
-        bottom: 40px;
-        right: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-        overflow: hidden;
-        white-space: nowrap;
-        background: #CC0000;
-    }
-    div.main .backTop.backTopVisible, div.main .backTop.backTopFadeOut, div.main .no-touch div.main .backTop:hover {
-      -webkit-transition: opacity .3s 0s, visibility 0s 0s;
-      -moz-transition: opacity .3s 0s, visibility 0s 0s;
-      transition: opacity .3s 0s, visibility 0s 0s;
-    }
-    div.main .backTop.backTopIsVisible {
-      /* the button becomes visible */
-      visibility: visible;
-      opacity: 1;
-    }
-    div.main .backTop.backTopFadeOut {
-      /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
-      opacity: .5;
-    }
-    div.main .no-touch .backTop:hover {
-      background-color: #e86256;
-      opacity: 1;
-    }
-    @media only screen and (min-width: 768px) {
-        div.main .backTop {
-        right: 20px;
-        bottom: 20px;
-      }
-    }
-    @media only screen and (min-width: 1024px) {
-        div.main .backTop {
-        right: 30px;
-        bottom: 30px;
-      }
-    }
-</style>
 </head>
 <body>
 <div class="main">
@@ -1612,6 +1418,34 @@ If you get a pop-up box offering you to upgrade to SPAMfighter Pro, it is becaus
 </center>
 
 <a href="#0" class="backTop">Top</a>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+$(document).ready(function($){
+	// browser window scroll (in pixels) after which the "back to top" link is shown
+	var offset = 300,
+		//browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+		offset_opacity = 1200,
+		//duration of the top scrolling animation (in ms)
+		scroll_top_duration = 700,
+		//grab the "back to top" link
+		$back_to_top = $('.backTop');
+	//hide or show the "back to top" link
+	$(window).scroll(function(){
+		( $(this).scrollTop() > offset ) ? $back_to_top.addClass('backTopIsVisible') : $back_to_top.removeClass('backTopIsVisible backTopFadeOut');
+		if( $(this).scrollTop() > offset_opacity ) { 
+			$back_to_top.addClass('backTopFadeOut');
+		}
+	});
+	//smooth scroll to top
+	$back_to_top.on('click', function(event){
+		event.preventDefault();
+		$('body,html').animate({
+			scrollTop: 0 ,
+		 	}, scroll_top_duration
+		);
+	});
+});
+</script>
 </div>
 </body>
 </html>
