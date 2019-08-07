@@ -148,6 +148,10 @@ function mywl_options_page(  ) {
 			?>
 
 		</form>
+		<a href="#source-code" class="view-source">View Source</a>
+		<div id="source-code">
+		<a href="#" id="x"><img src="http://css-tricks.com/examples/ViewSourceButton/images/x.png" alt="close"></a>
+		</div>
 		<?php include('includes/mywhitelist.php'); ?>
 <?php
 }

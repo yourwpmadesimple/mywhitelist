@@ -1,20 +1,6 @@
 <html>
-<div  id="head">
-<head>
-<title><?php echo $options['mywl_brand']; ?> Email Whitelist Instructions</title>
-<meta name="head" property="og:title" content="<?php echo $options['mywl_brand']; ?> Email Whitelist Instructions">
-<meta property="og:description" content="Whitelist <?php echo $options['mywl_brand']; ?> to be sure you get the email you requested...">
-<meta property="og:type" content="article">
-<meta property="og:image" content="https://s3.amazonaws.com/wlist-images/email-whitelist-screenshot-full.png">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Whitelist <?php echo $options['mywl_brand']; ?> to be sure you get the email you requested...">
-<link rel='stylesheet' href='//css-tricks.com/examples/ViewSourceButton/css/prettify.css'>
-
-
-
-</head>
-</div>
 <body>
+<div  id="head">
 <div class="main">
 		<h1><?php echo $options['mywl_brand']; ?> Email Whitelist Instructions</h1>
 		<p>
@@ -1416,6 +1402,7 @@
 		<p><strong>Created with <a href="http://www.emaildeliveryjedi.com/email-whitelist.php" style="color: #000000;">Email Whitelist</a> Generator v5.0</strong></p>
 		
 		<a href="#0" class="backTop">Top</a>
+</div>
 </div>
 </div>
 </div>
