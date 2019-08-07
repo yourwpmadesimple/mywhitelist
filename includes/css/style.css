@@ -1,178 +1,205 @@
-span.require{
-    color:red;
-}
-span.field-value{
-    color:green;
+a.view-source {
     display: block;
-    padding-left:1%;
-    margin: 0;
-}
-@import 'https://fonts.googleapis.com/css?family=Roboto';
-div.main h1 {
-    font-family: 'Roboto', sans-serif;
-    }
-div.main h2 {
+    background: #0073aa;
+    color: white;
+    padding: 1em;
+    text-align: center;
     font-size: 1.7em;
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    }
+    margin: 0 auto 1em;
+    max-width: 300px;
+}
+
+span.require {
+  color: red;
+}
+span.field-value {
+  color: green;
+  display: block;
+  padding-left: 1%;
+  margin: 0;
+}
+.main {
+  padding: 2em;
+  background-color: white;
+}
+.page-main {
+  background-color: white;
+  padding: 2em;
+}
+@import "https://fonts.googleapis.com/css?family=Roboto";
+div.main h1 {
+  font-family: "Roboto", sans-serif;
+}
+div.main h2 {
+  font-size: 1.7em;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
 div.main h3 {
-    font-family: 'Roboto', sans-serif;
-    }
+  font-family: "Roboto", sans-serif;
+}
 div.main h4 {
-    font-size: 18px;
-    font-weight: bold;
-    font-family: 'Roboto', sans-serif;
-    }
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
 div.main p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
 }
 div.main li {
-    font-size: 18px;
-    font-family: 'Roboto', sans-serif;
-    line-height: 30px;
-    }
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  line-height: 30px;
+}
 div.main a {
-    text-decoration: none;
-    color: #FFFFFF;
-    }
+  text-decoration: none;
+  color: #ffffff;
+}
 div.main .mobileButton {
-    margin: 2%;
-    margin-bottom: 3%;
-    padding: 2%;
-    border: solid #adadba 1px;
-    border-radius: 0px;
+  margin: 2%;
+  margin-bottom: 3%;
+  padding: 2%;
+  border: solid #adadba 1px;
+  border-radius: 0px;
+  text-align: center;
+  font-family: verdana;
+  font-weight: bold;
+}
+div.main .wrapper {
+  width: 800px;
+  text-align: left;
+}
+div.main .container {
+  margin: 0 auto;
+}
+div.main ul {
+  list-style: none;
+}
+div.main ul li {
+  padding: 10px 10px;
+}
+div.main ul li a {
+  text-align: center;
+  font-size: 21px;
+  text-decoration: none;
+}
+.columnHeading {
+  flex-grow: 1;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: row;
+}
+
+div.main .headingBorder {
+  padding: 20px 0;
+  text-align: center;
+  border-top: 2px solid gray;
+  border-bottom: 2px solid gray;
+}
+div.main .endRow {
+  float: right;
+}
+div.main .clearRight {
+  clear: left;
+}
+div.main .submenuPopularAppBtn,
+div.main .submenuEmailClientBtn,
+div.main .submenuSecuritySoftBtn,
+div.main .submenuSpamFiltersBtn {
+  text-align: center;
+  width: 75%;
+  padding: 10px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+div.main .submenuPopularAppBtn {
+  background-color: #007abd;
+}
+
+div.main .submenuEmailClientBtn {
+  background-color: #7ec324;
+}
+
+div.main .submenuSecuritySoftBtn {
+  background-color: #fdab00;
+}
+
+div.main .submenuSpamFiltersBtn {
+  background-color: #eb605a;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 879px) {
+  div.main .columnHeading {
+    width: 50%;
+  }
+
+  div.main .headingBorder {
+    padding: 20px 0;
     text-align: center;
-    font-family: verdana;
-    font-weight: bold;
-    }
-    div.main .wrapper {
-    width: 800px;
-    text-align: left;
-}
-div.main .container{
-    margin: 0 auto;
-    }
-    div.main ul{
-    list-style:none;
-}
-div.main ul li{
-    padding:10px 10px;
-}
-div.main ul li a{
-    text-align:center;
-    font-size: 21px;
-    text-decoration:none;
-}
-div.main .columnHeading{
-    width:25%;
-    float:left;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+  }
+
+  div.main #sSoftware {
+    clear: left;
+  }
 }
 
-div.main .headingBorder{
-    padding:20px 0;
-    text-align:center;
-    border-top:2px solid gray;
-    border-bottom:2px solid gray;
-}
-div.main .endRow{
-    float:right;
-}
-div.main .clearRight{
-    clear:left;
-}
-div.main .submenuPopularAppBtn,div.main .submenuEmailClientBtn,div.main .submenuSecuritySoftBtn,div.main .submenuSpamFiltersBtn{
-    text-align:center;
-    width:75%;
-    padding:10px;
-    cursor:pointer;
-}
-div.main .submenuPopularAppBtn{
-    background-color:#007abd;
-}
+@media only screen and (min-width: 880px) and (max-width: 1140px) {
+  div.main .columnHeading {
+    width: 33.33333%;
+  }
 
-div.main .submenuEmailClientBtn{
-    background-color:#7ec324;
-}
-
-div.main .submenuSecuritySoftBtn{
-    background-color:#fdab00;
-}
-
-div.main .submenuSpamFiltersBtn{
-    background-color:#eb605a;
-}
-
-@media only screen and (min-width:600px) and (max-width: 879px){
-    div.main .columnHeading{
-    width:50%;
-}
-
-div.main .headingBorder{
-    padding:20px 0;
-    text-align:center;
-    border-top:2px solid gray;
-    border-bottom:2px solid gray;
-}
-
-div.main #sSoftware{
-    clear:left;
-}
-}
-
-@media only screen 
-and (min-width : 880px) and (max-width:1140px) {
-    div.main .columnHeading{
-    width:33.33333%;
-}
-
-div.main #sFilters{
-    clear:both;
-}
+  div.main #sFilters {
+    clear: both;
+  }
 }
 /*fix margin*/
-@media only screen
-and (min-width:0) and (max-width:600px){
-    div.main body{
-  margin:10px;
-}
-div.main .columnHeading{
-    width:100%;
-}
-div.main .clearFix {
+@media only screen and (min-width: 0) and (max-width: 600px) {
+  div.main body {
+    margin: 10px;
+  }
+  div.main .columnHeading {
+    width: 100%;
+  }
+  div.main .clearFix {
     clear: both;
-}
+  }
 }
 
 /*Instruction Icons*/
 div.main .instruction-icon {
-        float: left;
-        margin: 10px;
-        }
+  float: left;
+  margin: 10px;
+}
 
 /* BEGIN Back to top button */
 div.main a.backTop {
   padding: 10px;
 }
 div.main .backTop {
-    color: #FFFFFF;
-    font-weight: bold;
-    font-family: roboto;
-    display: inline-block; 
-    position: fixed;
-    bottom: 40px;
-    right: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    overflow: hidden;
-    white-space: nowrap;
-    background: #CC0000;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: roboto;
+  display: inline-block;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  white-space: nowrap;
+  background: #cc0000;
 }
-div.main .backTop.backTopVisible, div.main .backTop.backTopFadeOut, div.main .no-touch div.main .backTop:hover {
-  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
-  -moz-transition: opacity .3s 0s, visibility 0s 0s;
-  transition: opacity .3s 0s, visibility 0s 0s;
+div.main .backTop.backTopVisible,
+div.main .backTop.backTopFadeOut,
+div.main .no-touch div.main .backTop:hover {
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+  transition: opacity 0.3s 0s, visibility 0s 0s;
 }
 div.main .backTop.backTopIsVisible {
   /* the button becomes visible */
@@ -181,21 +208,161 @@ div.main .backTop.backTopIsVisible {
 }
 div.main .backTop.backTopFadeOut {
   /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
-  opacity: .5;
+  opacity: 0.5;
 }
 div.main .no-touch .backTop:hover {
   background-color: #e86256;
   opacity: 1;
 }
 @media only screen and (min-width: 768px) {
-    div.main .backTop {
+  div.main .backTop {
     right: 20px;
     bottom: 20px;
   }
 }
 @media only screen and (min-width: 1024px) {
-    div.main .backTop {
+  div.main .backTop {
     right: 30px;
     bottom: 30px;
   }
+}
+
+/**
+Tabs
+**/
+* {
+  box-sizing: border-box;
+}
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  background: #efefef;
+  box-shadow: 0 48px 80px -32px rgba(0, 0, 0, 0.3);
+}
+.input {
+  position: absolute;
+  opacity: 0;
+}
+.label {
+  width: 100%;
+  padding: 20px 30px;
+  background: #e5e5e5;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  color: #7f7f7f;
+  transition: background 0.1s, color 0.1s;
+}
+
+.label:hover {
+  background: #d8d8d8;
+}
+
+.label:active {
+  background: #ccc;
+}
+
+.input:focus + .label {
+  box-shadow: inset 0px 0px 0px 3px #2aa1c0;
+  z-index: 1;
+}
+
+.input:checked + .label {
+  background: #fff;
+  color: #000;
+}
+
+@media (min-width: 600px) {
+  .label {
+    width: auto;
+  }
+}
+.panel {
+  display: none;
+  padding: 20px 30px 30px;
+  background: #fff;
+}
+
+@media (min-width: 600px) {
+  .panel {
+    order: 99;
+  }
+}
+
+.input:checked + .label + .panel {
+  display: block;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+#page-wrap {
+  width: 960px;
+  margin: 60px auto;
+}
+a img {
+  border: 0;
+}
+h1 {
+  font: 700 32px Helvetica, Arial, Sans-Serif;
+  letter-spacing: -1px;
+  margin: 50px 0 20px;
+}
+p {
+  margin: 0 0 20px;
+}
+#source-code {
+  display: none;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+}
+#source-code:target {
+  display: block;
+}
+#source-code pre {
+  padding: 20px;
+  font: 14px/1.6 Monaco, Courier, MonoSpace;
+  margin: 50px auto;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  width: 80%;
+  height: 80%;
+  overflow: auto;
+}
+#source-code pre a,
+#source-code pre a span {
+  text-decoration: none;
+  color: #00ccff !important;
+}
+#x {
+  position: absolute;
+  top: 30px;
+  left: 10%;
+  margin-left: -41px;
+}
+.button {
+  background: #00ccff;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
 }
