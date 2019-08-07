@@ -20,9 +20,9 @@ $plugins_url = plugins_url();
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
 </head>
 <body>
-<div class='copied'></div>
+
 <a href="#source-code" class="view-source">View Source</a>
-<a href="#" class="view-source" id="selectAll">Copy Code</a>
+
 <div id="source-code">
 <a href="#" id="x"><img src="http://css-tricks.com/examples/ViewSourceButton/images/x.png" alt="close"></a>
 </div>

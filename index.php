@@ -7,13 +7,16 @@
 * Author: Wayne Hatter
 * Author URI: https://yourwpmadesimple.com
 **/
+
+// Redirect user to plugin options page
+add_action( 'activated_plugin', 'mywl_activation_redirect' );
 function mywl_activation_redirect( $plugin ) {
     if( $plugin == plugin_basename( __FILE__ ) ) {
         exit( wp_redirect( admin_url( 'admin.php?page=my_whitelist' ) ) );
     }
 }
-add_action( 'activated_plugin', 'mywl_activation_redirect' );
 
+// Add link to the plugin's setting page from the plugins page
 add_filter('plugin_action_links_'.plugin_basename(__FILE__), 'mywl_settings_link');
 function mywl_settings_link( $links ) {
 	$links[] = '<a href="' .
@@ -22,7 +25,17 @@ function mywl_settings_link( $links ) {
 	return $links;
 }
 
+// Remove options on uninstall
+function mywl_uninstall(){
+	if (!current_user_can('activate_plugins')){
+		return;
+	} 
+	delete_option('mywl_settings');
+}
+register_uninstall_hook(__FILE__, 'mywl_uninstall');
+
 //add_action( 'admin_init','mywhitelist');
+// May not need this functionality. Nevertheless, it will stay put just in case
 function mywhitelist() {
 		wp_enqueue_style('mywl-css', plugins_url('/includes/css/style.css',__FILE__ ));
 		wp_enqueue_style('mywl-ui-base-theme', 'https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css');
@@ -30,24 +43,16 @@ function mywhitelist() {
 		wp_enqueue_script( 'mywl-js', plugins_url('/includes/js/scripts.js',__FILE__ ), array('jquery'), true);
 		wp_enqueue_script( 'mywl-tabs', 'https://code.jquery.com/ui/1.12.1/jquery-ui.js', true);
 }
-// Options Page
 
+
+// Options Page
 add_action( 'admin_menu', 'mywl_add_admin_menu' );
 function mywl_add_admin_menu(  ) { 
 
 	add_menu_page( 'My WhiteList', 'My WhiteList', 'manage_options', 'my_whitelist', 'mywl_options_page' );
-	add_submenu_page( 'my_whitelist', 'My Custom Page', 'My Custom Page',
-    'manage_options', 'my_whitelist_code_page', 'whitelist_page_code');
 }
 
-function whitelist_page_code(){
-?>
-<div id="page-code">
-	<?php include('includes/mywhitelist.html'); ?>
-</div>
-<?php
-}
-
+// Register the options page settings
 add_action( 'admin_init', 'mywl_settings_init' );
 function mywl_settings_init() { 
 
