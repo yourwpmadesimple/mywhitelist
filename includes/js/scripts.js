@@ -10,8 +10,6 @@
                 '\n</html></textarea>',
         "class": "prettyprint"
     }).appendTo("#source-code");
-    
-
     // Higlight source content
     $('#source-code .prettyprint').click(function() {
         $(this).focus();
